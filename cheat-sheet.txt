@@ -1,0 +1,15 @@
+# (Windows)Powershellでpingに日時を付ける
+
+```
+ping -t [IPアドレス] | %{(Get-Date).ToString() + " $_"}
+```
+
+# (Oracle)ASMディスク毎の利用率を確認する。
+
+```
+col NAME for a15
+col PATH for a20
+
+select NAME, PATH, ROUND(TOTAL_MB/1024,2) as TOTAL_GB, ROUND(FREE_MB/1024,2) as FREE_GB  from v$asm_disk;
+```
+
