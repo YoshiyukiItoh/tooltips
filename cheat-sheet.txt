@@ -4,6 +4,12 @@
 ping -t [IPアドレス] | %{(Get-Date).ToString() + " $_"}
 ```
 
+# (Linux)shellでpingに日時を付ける
+
+```
+ping [宛先] | awk '{print strftime("%Y/%m/%d %H:%M:%S"), $0}'
+```
+
 # (Oracle)ASMディスク毎の利用率を確認する。
 
 ```
