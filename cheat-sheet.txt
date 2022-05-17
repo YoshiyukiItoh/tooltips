@@ -10,6 +10,18 @@ ping -t [IPアドレス] | %{(Get-Date).ToString() + " $_"}
 ping [宛先] | awk '{print strftime("%Y/%m/%d %H:%M:%S"), $0}'
 ```
 
+# (Linux)過去タイムスタンプのディレクトリを作成する(テスト用)
+
+```
+function mktouch() {
+  DIR=$1
+  DIRPATH=`dirname ${DIR}`
+  DIRNAME=`basename ${DIR}`
+  mkdir ${DIRPATH}/${DIRNAME}
+  touch -amt "${DIRNAME:0:12}.${DIRNAME:12}" ${DIRPATH}/${DIRNAME}
+}
+```
+
 # (Oracle)ASMディスク毎の利用率を確認する。
 
 ```
