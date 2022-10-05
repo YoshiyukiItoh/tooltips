@@ -28,3 +28,9 @@ WHERE pg_index.indisvalid = false
 AND pg_index.indexrelid = pg_class.oid;
 ```
 
+# (Oracle)alertログに時刻を付与する
+
+```
+awk 'begin{t=""}; {if (match($0, /^....-..-..T..:..:..\.......\+..\:..$/)){t=$0} else {printf("%s | %s\n",t,$0)}}' <アラートログファイル名>
+```
+
