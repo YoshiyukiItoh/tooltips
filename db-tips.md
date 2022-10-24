@@ -71,3 +71,6 @@ exec dbms_stats.unlock_table_stats('SCOTT','tblHoge');
 select TABLE_NAME ,STATTYPE_LOCKED from USER_TAB_STATISTICS;
 ```
 
+# Oracle RACのインターコネクトネットワーク設計について
+RAC 環境における gc block lost やネットワークパフォーマンス低下のトラブルシューティング (Doc ID 2215983.1)
+
