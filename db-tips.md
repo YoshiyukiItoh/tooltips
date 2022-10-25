@@ -74,3 +74,6 @@ select TABLE_NAME ,STATTYPE_LOCKED from USER_TAB_STATISTICS;
 # Oracle RACのインターコネクトネットワーク設計について
 RAC 環境における gc block lost やネットワークパフォーマンス低下のトラブルシューティング (Doc ID 2215983.1)
 
+# (Oracle)便利SQLページ
+https://oracle-base.com/dba/scripts
+
