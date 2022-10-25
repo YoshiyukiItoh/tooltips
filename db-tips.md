@@ -77,3 +77,7 @@ RAC 環境における gc block lost やネットワークパフォーマンス�
 # (Oracle)便利SQLページ
 https://oracle-base.com/dba/scripts
 
+# (Oracle)チューニング対象のSQLを確認する
+http://oracledba-memo.com/oracle/sql%E6%96%87%E9%96%A2%E9%80%A3/%E3%83%81%E3%83%A5%E3[…]0%E5%AF%BE%E8%B1%A1sql%E6%96%87%E3%81%AE%E7%A2%BA%E8%AA%8D/
+
+
