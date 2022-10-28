@@ -95,5 +95,7 @@ from v$session
 where (sql_id is not null or prev_sql_id is not null)
 and username like '<ユーザ名>'
 
+#直前に実行したSQLのSQLID
+SELECT  *  FROM  TABLE( DBMS_XPLAN.DISPLAY_CURSOR() );
 ```
 
