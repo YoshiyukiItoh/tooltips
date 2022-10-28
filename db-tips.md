@@ -83,4 +83,17 @@ http://oracledba-memo.com/oracle/sql%E6%96%87%E9%96%A2%E9%80%A3/%E3%83%81%E3%83%
 # (Oracle)カーソルまわりの話し
 https://kita-note.com/oracle-cursor
 
+# (Oracle)
+
+```
+# SQLがわかる場合
+select sql_text, sql_id from v$sql where sql_text like '%test1%';
+
+# SQLがアプリから実行されていてわからない場合。v$sessionで頑張る
+select sid, serial# , username, status, SQL_id, prev_sql_id
+from v$session
+where (sql_id is not null or prev_sql_id is not null)
+and username like '<ユーザ名>'
+
+```
 
