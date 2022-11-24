@@ -28,10 +28,16 @@ WHERE pg_index.indisvalid = false
 AND pg_index.indexrelid = pg_class.oid;
 ```
 
-# (Oracle)alertログに時刻を付与する
+# (Oracle)alertログに時刻を付与する(19c)
 
 ```
 awk 'begin{t=""}; {if (match($0, /^....-..-..T..:..:..\.......\+..\:..$/)){t=$0} else {printf("%s | %s\n",t,$0)}}' <アラートログファイル名>
+```
+
+#  (Oracle)alertログに時刻を付与する(11g)
+
+```
+awk 'begin{t=""}; {if (match($0, /^... ... .. ..:..:.. ....$/)){t=$0} else {printf("%s | %s\n",t,$0)}}' | <アラートログファイル名>
 ```
 
 # (Oracle)自動オプティマイザ統計収集
